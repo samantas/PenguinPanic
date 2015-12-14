@@ -27,12 +27,13 @@ public class Teleporter : MonoBehaviour {
 				if (Random.value < 0.5) {
 					teleOut1.teleported = true;
 					other.transform.position = teleOut1.transform.position;
+					other.transform.position += other.transform.up * 0.75f;
 				
 				
 				} else {
 					teleOut2.teleported = true;
 					other.transform.position = teleOut2.transform.position;
-				
+					other.transform.position += other.transform.up * 0.75f;
 				
 				}
 			}

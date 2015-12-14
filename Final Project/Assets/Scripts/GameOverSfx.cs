@@ -6,17 +6,17 @@ public class GameOverSfx : MonoBehaviour {
 	public AudioSource gameOverAS;
 	public AudioClip gameOverSfx;
 
-	private static GameOverSfx script;
+	public static GameOverSfx script;
 
 	void Awake(){
 
 		if (script == null) {
 			script = this;
-			DontDestroyOnLoad(gameObject);
-			DontDestroyOnLoad(gameOverAS);
-			DontDestroyOnLoad(gameOverSfx);
+			DontDestroyOnLoad(this.gameObject);
+			DontDestroyOnLoad(this.gameOverAS);
+			DontDestroyOnLoad(this.gameOverSfx);
 		} else {
-			DestroyImmediate(gameObject);
+			DestroyImmediate(this.gameObject);
 		}
 	}
 

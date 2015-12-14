@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 
 		// need to initialize all the variables here to avoid null reference error
-
+		gameoversfx = GameOverSfx.script;
 		
 		InvokeRepeating ("spawnEnemy", 1.0f, 7.0f);
 		InvokeRepeating("spawnAmmo", 1.0f, 7.0f);

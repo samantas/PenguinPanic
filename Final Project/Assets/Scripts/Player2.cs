@@ -172,7 +172,7 @@ public class Player2 : MonoBehaviour {
 		if (canShoot == true) {
 			
 			// instantiate new bullet and set it equal to newBullet
-			Bullet newBullet = (Bullet)Instantiate (bullet, transform.position + transform.forward, Quaternion.identity);
+			Bullet newBullet = (Bullet)Instantiate (bullet, transform.position + transform.forward * 2, Quaternion.identity);
 			newBullet.direction = transform.forward;
 			bulletCounter -= 1;
 			
