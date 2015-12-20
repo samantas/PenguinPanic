@@ -46,35 +46,45 @@ public class UIManager : MonoBehaviour {
 		fill1.color = healthColors.Evaluate (player1.currentHealth / player1.maxHealth);
 		fill2.color = healthColors.Evaluate (player2.currentHealth / player2.maxHealth);
 
-		// if player1 dies, lose one of the heart images
-		if (player1.lives == 3) {
-			// don't do anything
-
-		} else if (player1.lives == 2) {
-			p1lives[0].enabled = false;
-		} else if (player1.lives == 1) {
-			p1lives[1].enabled = false;
-		} else if (player1.lives == 0) {
-			p1lives[2].enabled = false;
+		if (player1.lives == 0) {
 			player1.currentHealth = 0;
-			fill1.color = Color.gray;
+		} else {
 
 		}
+
+		if (player2.lives == 0) {
+			player2.currentHealth = 0;
+		} else {
+
+		}
+
+		// if player1 dies, lose one of the heart images
+//		if (player1.lives == 3) {
+//			// don't do anything
+//
+//		} else if (player1.lives == 2) {
+//			p1lives[0].enabled = false;
+//		} else if (player1.lives == 1) {
+//			p1lives[1].enabled = false;
+//		} else if (player1.lives == 0) {
+//			p1lives[2].enabled = false;
+//			player1.currentHealth = 0;
+//			fill1.color = Color.gray;
+//		}
 
 		// if player2 dies, lose one of the heart images
-		if (player2.lives == 3) {
-			// don't do anything
-			
-		} else if (player2.lives == 2) {
-			p2lives[0].enabled = false;
-		} else if (player2.lives == 1) {
-			p2lives[1].enabled = false;
-		} else if (player2.lives == 0) {
-			p2lives[2].enabled = false;
-			player2.currentHealth = 0;
-			fill2.color = Color.gray;
-
-		}
+//		if (player2.lives == 3) {
+//			// don't do anything
+//			
+//		} else if (player2.lives == 2) {
+//			p2lives[0].enabled = false;
+//		} else if (player2.lives == 1) {
+//			p2lives[1].enabled = false;
+//		} else if (player2.lives == 0) {
+//			p2lives[2].enabled = false;
+//			player2.currentHealth = 0;
+//			fill2.color = Color.gray;
+//		}
 
 		// if player1 uses bullet, remove from UI
 		p1bullets.text = player1.bulletCounter + " ";

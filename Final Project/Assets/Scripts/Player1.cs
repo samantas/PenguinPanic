@@ -46,7 +46,7 @@ public class Player1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
-		lives = 3;
+		lives = 1;
 		bulletReset = false;
 		bulletCounter = 10;
 	}
